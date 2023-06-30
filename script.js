@@ -15,14 +15,16 @@ function generateReferralCode() {
     return referralCode;
   }
   
-  // Function to track successful referrals
-  function trackReferral(referrer, referredCustomer, purchaseAmount) {
-    // Simulated implementation for tracking successful referrals
-    console.log(`Referrer: ${referrer}`);
-    console.log(`Referred Customer: ${referredCustomer}`);
-    console.log(`Purchase Amount: $${purchaseAmount}`);
-    
-    // Add your logic to store the referral information in a database or make an API call
+// Function to track successful referrals
+function trackReferral(referrerName, referrerEmail, referralCode, purchaseAmount) {
+    // Add your logic to track and store successful referrals
+    // You can use a database or an API call to store the referral information
+    // For simplicity, we'll just log the referral data to the console
+    console.log('Referral tracked:');
+    console.log('Referrer Name:', referrerName);
+    console.log('Referrer Email:', referrerEmail);
+    console.log('Referral Code:', referralCode);
+    console.log('Purchase Amount:', purchaseAmount);
   }
   
   // Event listener for referral code generation
@@ -37,20 +39,22 @@ function generateReferralCode() {
       // Get the referrer's information
       const referrerName = document.getElementById("referrer-name").value;
       const referrerEmail = document.getElementById("referrer-email").value;
-      const purchaseAmount = parseFloat(document.getElementById("purchase-amount").value);
   
       // Generate a unique referral code
       const referralCode = generateReferralCode();
+  
+      // Get the purchase amount
+      const purchaseAmount = document.getElementById("purchase-amount").value;
   
       // Display the referral code to the referrer
       const referralCodeDisplay = document.getElementById("referral-code-display");
       referralCodeDisplay.innerHTML = referralCode;
   
-      // Track the referral with the actual purchase amount
-      trackReferral(referrerName, referrerEmail, purchaseAmount);
+      // Add the referral code and referrer's information to the referral tracking system
+      trackReferral(referrerName, referrerEmail, referralCode, purchaseAmount);
   
       // Reset the form fields
       referralForm.reset();
     });
-  });
+});
   
