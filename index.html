@@ -1,105 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Referral Program</title>
-  <!-- CSS styling -->
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyfame</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <header>
-    <!-- Header content -->
-    <h1>Referral Program</h1>
-  </header>
-  
-  <nav>
-    <!-- Navigation menu -->
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#details">Referral Program Details</a></li>
-      <li><a href="#account">Account</a></li>
-      <li><a href="#generator">Referral Link/Code Generator</a></li>
-      <li><a href="#tracking">Referral Tracking</a></li>
-      <li><a href="#communication">Communication</a></li>
-      <li><a href="#resources">Resources</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ul>
-  </nav>
-  
-  <section id="home" class="container">
-    <!-- Homepage content -->
-    <h2>Welcome to our Referral Program</h2>
-    <p>Join our referral program and start earning rewards by referring friends and family!</p>
-    <p>Sign up for an account, generate your unique referral link or code, and share it with others. When they make a purchase, you'll receive rewards!</p>
-  </section>
-  
-  <section id="details" class="container">
-    <!-- Referral program details -->
-    <h2>Referral Program Details</h2>
-    <p>Learn more about how our referral program works and the benefits you can enjoy.</p>
-    <!-- Add more content as needed -->
-  </section>
-  
-  <section id="account" class="container">
-    <!-- Customer account system -->
-    <h2>Create an Account</h2>
-    <form id="account-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-      <input type="submit" value="Create Account">
+<body style="display:flex; align-items:center; justify-content:center;">
+<div class="login-page">
+  <div class="form">
+    <form class="register-form" id="register-form" method="POST">
+      <h1><b>BUYFAME</b></h1>
+      <h2><i class="fas fa-lock"></i> Register</h2>
+      <input type="text" placeholder="Full Name *" required/>
+      <input type="text" placeholder="Username *" required/>
+      <input type="email" placeholder="Email *" required/>
+      <input type="password" placeholder="Password *" required/>
+      <button type="submit" id="register-btn">create</button>
+      <p class="message">Already registered? <a href="#" id="login-link">Sign In</a></p>
     </form>
-  </section>
-  
-  <section id="generator" class="container">
-    <!-- Referral link/code generator -->
-    <h2>Generate Your Referral Code</h2>
-    <form id="referral-form">
-      <label for="referrer-name">Your Name</label>
-      <input type="text" id="referrer-name" name="referrer-name" required>
-      <label for="referrer-email">Your Email</label>
-      <input type="email" id="referrer-email" name="referrer-email" required>
-      <label for="purchase-amount">Purchase Amount</label>
-      <input type="number" id="purchase-amount" name="purchase-amount" required>
-      <input type="submit" value="Generate Referral Code">
+    <form class="login-form" id="login-form" method="POST">
+        <h1><b>BUYFAME</b></h1>
+      <h2><i class="fas fa-lock"></i> Login</h2>
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required/>
+      <button type="submit" id="login-btn">login</button>
+      <p class="message">Not registered? <a href="#" id="register-link">Create an account</a></p>
     </form>
-    <div id="referral-code-display"></div>
-  </section>
-  
-  <section id="tracking" class="container">
-    <!-- Referral tracking and management -->
-    <h2>Referral Tracking</h2>
-    <p>Track your referrals and monitor your rewards.</p>
-    <!-- Add more content as needed -->
-  </section>
-  
-  <section id="communication" class="container">
-    <!-- Communication and notifications -->
-    <h2>Communication and Notifications</h2>
-    <p>Stay updated with the latest referral program news and receive notifications about your referral status.</p>
-    <!-- Add more content as needed -->
-  </section>
-  
-  <section id="resources" class="container">
-    <!-- Promotional materials and resources -->
-    <h2>Resources</h2>
-    <p>Access promotional materials, banners, and resources to help you promote our products and referral program.</p>
-    <!-- Add more content as needed -->
-  </section>
-  
-  <section id="faq" class="container">
-    <!-- Frequently Asked Questions -->
-    <h2>Frequently Asked Questions</h2>
-    <p>Find answers to common questions about our referral program.</p>
-    <!-- Add more content as needed -->
-  </section>
-  
-  <footer>
-    <!-- Footer content -->
-    <p>&copy; 2023 Your Company. All rights reserved.</p>
-  </footer>
-  
-  <!-- JavaScript logic -->
-  <script src="script.js"></script>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
